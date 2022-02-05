@@ -69,5 +69,5 @@ class Player:
 def main():
     player1 = Player("Daniel Kim", "Software Engineer", ["Gamer", "Musician"], "Gardener", 0)
     print(player1)
-main()
+#main()
     

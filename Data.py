@@ -6,6 +6,9 @@ class gameState():
     completePlayers = []
     round = 0
 
+    def addPlayerMini(self,player):
+        self.players.append(player)
+
     def addPlayer(self,player):
         self.players.append(player)
         self.completePlayers.append(player)

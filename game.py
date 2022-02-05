@@ -23,14 +23,19 @@ def playRound():
     print(f"\n The scores on the doors are : \n")
     showPlayers()
 
-    if gameState.getPlayers() is not None:
+    while gameState.getPlayers() is not None:
         choice = gameState.getRandPlayer()
         print(choice)
+        if input() != choice.getTrueTitle():
+            choice.addScore(1)
+            gameState.addPlayerMini(choice)
+        
+
      
 
 
     else:
-        ScoreBoard
+        ScoreBoard(gameState.getCompletePlayers())
         print("Game over")
         
 
