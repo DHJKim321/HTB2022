@@ -1,33 +1,37 @@
 
-import player
+import Player
 import Data
-
-
-data = Data()
+gameState = Data.gameState()
 
 def startGame():
     print("the active players are:")
 
-    for player in data.getPlayers():
-        if player is not None:
-            print(f"{player.getName()}\n", 20)
-
-
-
-    response = input("Do you want to add another player?").tolower()
-
+    response = input("Do you want to add another player?").lower()
+    print(response)
     while response == "y":
-        newPlayer = player
-        data.addPlayer(newPlayer)
-        response = input("Do you want to add another player?").tolower()
+
+        gameState.addPlayer(buildPlayer())
+        response = input("Do you want to add another player?").lower()
     playRound()
 
+def showPlayers():
+        for player in gameState.getPlayers():
+            if player is not None:
+                print(f"{player.getName()}\n")
 
 def playRound():
-    data.getRandPlayer()
+    showPlayers()
+    #gameState.getRandPlayer()
+
 
     
-
+def buildPlayer():
+    name = input("what is the players name?")
+    title = input("what is the players job title?")
+    false_1 = input("What is the first false and?")
+    false_2 = input("What is the second false and?")
+    true_title = input("What is the players real and?")
+    return Player.Player(name,title,false_1,false_2,true_title,0)
 
 
 

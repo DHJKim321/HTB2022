@@ -1,8 +1,6 @@
-from random import random
-import re
+import random
 
-
-class Data():
+class gameState():
 
     players = []
     completePlayers = []
