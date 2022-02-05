@@ -14,11 +14,8 @@ class Player:
 
 
     def __str__(self):
-        return ("Name: " + self.name + "\n" + "Job title: "
-                + self.title + "\n" + "False AND titles: "
-                + self.false_list[0] + ", " + self.false_list[1] 
-                + "\n" + "True AND title: " + self.true_title 
-                + "\n" + "Score: " + str(self.score))
+        return ("Name: " + self.name + "\n" + "Job title: " + self.title + "\n" + 
+                "Choices: " + self.false_list[0] + ", " + self.false_list[1] + ", " + self.true_title )
 
     
     def setName(self):
@@ -71,6 +68,6 @@ class Player:
 
 def main():
     player1 = Player("Daniel Kim", "Software Engineer", ["Gamer", "Musician"], "Gardener", 0)
-    #print(player1)
+    print(player1)
 main()
     
