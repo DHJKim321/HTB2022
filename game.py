@@ -4,24 +4,25 @@ import Data
 gameState = Data.gameState()
 
 def startGame():
-    print("the active players are:")
 
     response = input("Do you want to add another player?").lower()
-    print(response)
-    while response == "y":
 
+    while response == "y":
         gameState.addPlayer(buildPlayer())
         response = input("Do you want to add another player?").lower()
     playRound()
 
 def showPlayers():
+    if gameState.getPlayers() != None:
         for player in gameState.getPlayers():
-            if player is not None:
-                print(f"{player.getName()}\n")
+                print(f"one player is : {player.getName()}\n")
 
 def playRound():
     showPlayers()
-    #gameState.getRandPlayer()
+    if gameState.getPlayers() is not None:
+        gameState.getRandPlayer()
+    else:
+        print("you are lonely aren't you!")
 
 
     

@@ -9,11 +9,21 @@ class gameState():
     def addPlayer(self,player):
         self.players.append(player)
         self.completePlayers.append(player)
+
     def getPlayers(self):
+        if self.players == []:
+            return None
         return self.players
+
     def nextRound(self):
         self.round += 1
+
     def getRound(self):
         return round
+
     def getRandPlayer(self):
-        self.players.pop(random.choice(self.players))
+        if self.players != []:
+            choice = random.choice(self.players)
+            self.players.remove(choice)
+            return choice
+        return None
