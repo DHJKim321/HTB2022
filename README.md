@@ -9,8 +9,8 @@ Password: WelcomeToHTB08!
 Who is your favourite historical character: Jesus Christ
 
 
-1. 3 pairs of randomly generated AND titles
-2. Game chooses a user at random. User inputs two false AND titles and one true.    Everyone else chooses what the two falses and one true ones are.
+
+Overview: Game chooses a user at random. User inputs two false AND titles and one true. Everyone else chooses what the two falses and one true ones are.
 
 Game starts
 Everyone inputs: 
@@ -27,5 +27,17 @@ Everyone chooses which ones are false and true
 Calculate score based on time taken/number of correct guesses (Low priority)
 
 Necessary files:
-    Player class
-    Game controller class
+    Player class:
+        Constructor
+        Get name
+        Get Job title
+        Get score
+        Add score
+        Get 2 false and 1 true AND titles
+        Get photo (Not yet)
+        Pretty print
+    Game controller class:
+        Start game
+        Control game flow
+    Scoreboard class:
+        Pretty print scoreboard
