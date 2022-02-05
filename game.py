@@ -31,7 +31,7 @@ def buildPlayer():
     false_1 = input("What is the first false and?")
     false_2 = input("What is the second false and?")
     true_title = input("What is the players real and?")
-    return Player.Player(name,title,false_1,false_2,true_title,0)
+    return Player.Player(name,title,[false_1,false_2],true_title,0)
 
 
 
