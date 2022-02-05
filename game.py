@@ -24,7 +24,11 @@ def playRound():
     showPlayers()
 
     if gameState.getPlayers() is not None:
-        gameState.getRandPlayer()
+        choice = gameState.getRandPlayer()
+        print(choice)
+     
+
+
     else:
         ScoreBoard
         print("Game over")
