@@ -1,8 +1,9 @@
 
 import Player
 import Data
+from Scoreboard import ScoreBoard
+#import Scoreboard
 gameState = Data.gameState()
-
 def startGame():
 
     response = input("Do you want to add another player?").lower()
@@ -10,19 +11,24 @@ def startGame():
     while response == "y":
         gameState.addPlayer(buildPlayer())
         response = input("Do you want to add another player?").lower()
+    
     playRound()
 
 def showPlayers():
-    if gameState.getPlayers() != None:
-        for player in gameState.getPlayers():
-                print(f"one player is : {player.getName()}\n")
+    players = gameState.getCompletePlayers()
+    ScoreBoard(players)
+    
 
 def playRound():
+    print(f"\n The scores on the doors are : \n")
     showPlayers()
+
     if gameState.getPlayers() is not None:
         gameState.getRandPlayer()
     else:
-        print("you are lonely aren't you!")
+        ScoreBoard
+        print("Game over")
+        
 
 
     

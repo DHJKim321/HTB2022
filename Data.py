@@ -15,6 +15,11 @@ class gameState():
             return None
         return self.players
 
+    def getCompletePlayers(self):
+        if self.completePlayers == []:
+            return None
+        return self.completePlayers
+
     def nextRound(self):
         self.round += 1
 
